@@ -1,0 +1,318 @@
+Osnova:
+  <<: &osnova
+    ha-font-family-body: "Onest, Roboto, Noto, sans-serif"
+    ha-font-family-code: "'JetBrains Mono', ui-monospace, monospace"
+    ha-card-border-radius: "18px"
+    ha-card-border-width: "1px"
+    ha-card-box-shadow: "none"
+    ha-card-header-font-size: "18px"
+    ha-tile-icon-border-radius: "10px"
+    ha-switch-width: "40px"
+    ha-switch-size: "24px"
+    ha-switch-thumb-size: "18px"
+    ha-switch-thumb-box-shadow: "none"
+    ha-switch-checked-background-color: "var(--primary-color)"
+    ha-switch-checked-border-color: "var(--primary-color)"
+    text-light-primary-color: "var(--primary-color)"
+    bar-box-shadow: "none"
+  modes:
+    light:
+      <<: &osnova-light
+        primary-background-color: "#F2F3F5"
+        secondary-background-color: "#E6E8EC"
+        card-background-color: "#FFFFFF"
+        ha-card-background: "#FFFFFF"
+        clear-background-color: "#FFFFFF"
+        ha-card-border-color: "#E1E4E9"
+
+        primary-text-color: "#14171A"
+        secondary-text-color: "#454D57"
+        disabled-text-color: "#969DA6"
+        text-primary-color: "#FFFFFF"
+        text-accent-color: "#FFFFFF"
+
+        divider-color: "#E9EBEF"
+        outline-color: "#E1E4E9"
+        outline-hover-color: "#C9CED6"
+        scrollbar-thumb-color: "#C9CED6"
+        disabled-color: "#C9CED6"
+
+        app-header-background-color: "#F2F3F5"
+        app-header-text-color: "#14171A"
+        app-header-edit-background-color: "#14171A"
+        app-header-edit-text-color: "#FFFFFF"
+        sidebar-background-color: "#FFFFFF"
+        sidebar-text-color: "#454D57"
+        sidebar-icon-color: "#646C76"
+        sidebar-selected-text-color: "#14171A"
+        sidebar-selected-icon-color: "#14171A"
+
+        ha-panel-background: &osnova-light-ornament "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2240%22%3E%3Cpath d=%22M0.6 4.6l2.8 2.8m0-2.8l-2.8 2.8M0.6 28.6l2.8 2.8m0-2.8l-2.8 2.8M4.6 0.6l2.8 2.8m0-2.8l-2.8 2.8M4.6 16.6l2.8 2.8m0-2.8l-2.8 2.8M4.6 32.6l2.8 2.8m0-2.8l-2.8 2.8M8.6 12.6l2.8 2.8m0-2.8l-2.8 2.8M8.6 20.6l2.8 2.8m0-2.8l-2.8 2.8M8.6 36.6l2.8 2.8m0-2.8l-2.8 2.8M12.6 8.6l2.8 2.8m0-2.8l-2.8 2.8M12.6 24.6l2.8 2.8m0-2.8l-2.8 2.8M16.6 4.6l2.8 2.8m0-2.8l-2.8 2.8M16.6 16.6l2.8 2.8m0-2.8l-2.8 2.8M16.6 28.6l2.8 2.8m0-2.8l-2.8 2.8M20.6 8.6l2.8 2.8m0-2.8l-2.8 2.8M20.6 24.6l2.8 2.8m0-2.8l-2.8 2.8M24.6 12.6l2.8 2.8m0-2.8l-2.8 2.8M24.6 20.6l2.8 2.8m0-2.8l-2.8 2.8M24.6 36.6l2.8 2.8m0-2.8l-2.8 2.8M28.6 0.6l2.8 2.8m0-2.8l-2.8 2.8M28.6 16.6l2.8 2.8m0-2.8l-2.8 2.8M28.6 32.6l2.8 2.8m0-2.8l-2.8 2.8M32.6 4.6l2.8 2.8m0-2.8l-2.8 2.8M32.6 28.6l2.8 2.8m0-2.8l-2.8 2.8M36.6 8.6l2.8 2.8m0-2.8l-2.8 2.8M36.6 24.6l2.8 2.8m0-2.8l-2.8 2.8M36.6 36.6l2.8 2.8m0-2.8l-2.8 2.8%22 fill=%22none%22 stroke=%22%2314171A%22 stroke-opacity=%22.05%22 stroke-width=%22.9%22 stroke-linecap=%22round%22/%3E%3C/svg%3E') repeat fixed #F2F3F5"
+        lovelace-background: *osnova-light-ornament
+
+        input-fill-color: "#F4F5F7"
+        input-ink-color: "#14171A"
+        input-label-ink-color: "#646C76"
+        input-dropdown-icon-color: "#646C76"
+        input-idle-line-color: "#C9CED6"
+        input-hover-line-color: "#646C76"
+        input-outlined-idle-border-color: "#C9CED6"
+        input-outlined-hover-border-color: "#646C76"
+
+        ha-switch-background-color: "#C9CED6"
+        ha-switch-border-color: "#C9CED6"
+        ha-switch-thumb-background-color: "#FFFFFF"
+        ha-switch-thumb-border-color: "#FFFFFF"
+        ha-switch-checked-thumb-background-color: "#FFFFFF"
+        ha-switch-checked-thumb-border-color: "#FFFFFF"
+
+        state-icon-color: "#646C76"
+        state-inactive-color: "#646C76"
+        error-color: "#D9483D"
+        warning-color: "#C48F00"
+        success-color: "#1A7F51"
+        info-color: "#2F86E0"
+        red-color: "#D9483D"
+        deep-orange-color: "#E8701F"
+        orange-color: "#E8701F"
+        amber-color: "#E39A12"
+        yellow-color: "#C48F00"
+        green-color: "#1A7F51"
+        teal-color: "#13968C"
+        cyan-color: "#13968C"
+        light-blue-color: "#2F86E0"
+        blue-color: "#2F86E0"
+        indigo-color: "#7C68E6"
+        deep-purple-color: "#7C68E6"
+        purple-color: "#7C68E6"
+
+        energy-solar-color: "#E39A12"
+        energy-grid-consumption-color: "#2F86E0"
+        energy-grid-return-color: "#1D64B3"
+        energy-battery-out-color: "#1A7F51"
+        energy-battery-in-color: "#1A7F51"
+        energy-non-fossil-color: "#1A7F51"
+        energy-gas-color: "#13968C"
+        energy-water-color: "#2F86E0"
+
+        ha-color-neutral-05: "#14171A"
+        ha-color-neutral-10: "#202429"
+        ha-color-neutral-20: "#2C3238"
+        ha-color-neutral-30: "#394048"
+        ha-color-neutral-40: "#454D57"
+        ha-color-neutral-50: "#646C76"
+        ha-color-neutral-60: "#969DA6"
+        ha-color-neutral-70: "#B0B6BE"
+        ha-color-neutral-80: "#C9CED6"
+        ha-color-neutral-90: "#E1E4E9"
+        ha-color-neutral-95: "#F2F3F5"
+
+        ha-color-primary-05: "color-mix(in srgb, var(--primary-color) 40%, #14171A)"
+        ha-color-primary-10: "color-mix(in srgb, var(--primary-color) 55%, #14171A)"
+        ha-color-primary-20: "color-mix(in srgb, var(--primary-color) 70%, #14171A)"
+        ha-color-primary-30: "color-mix(in srgb, var(--primary-color) 85%, #14171A)"
+        ha-color-primary-40: "var(--primary-color)"
+        ha-color-primary-50: "var(--primary-color)"
+        ha-color-primary-60: "color-mix(in srgb, var(--primary-color) 75%, #FFFFFF)"
+        ha-color-primary-70: "color-mix(in srgb, var(--primary-color) 50%, #FFFFFF)"
+        ha-color-primary-80: "color-mix(in srgb, var(--primary-color) 26%, #FFFFFF)"
+        ha-color-primary-90: "color-mix(in srgb, var(--primary-color) 13%, #FFFFFF)"
+        ha-color-primary-95: "color-mix(in srgb, var(--primary-color) 7%, #FFFFFF)"
+
+      primary-color: "#1A7149"
+      accent-color: "#1A7149"
+      light-primary-color: "#E1EDE7"
+      dark-primary-color: "#196442"
+    dark:
+      <<: &osnova-dark
+        primary-background-color: "#0E1013"
+        secondary-background-color: "#23272D"
+        card-background-color: "#15181C"
+        ha-card-background: "#15181C"
+        clear-background-color: "#0E1013"
+        ha-card-border-color: "#23272D"
+
+        primary-text-color: "#EEF1F4"
+        secondary-text-color: "#A7B0BB"
+        disabled-text-color: "#626A76"
+        text-primary-color: "#0E1013"
+        text-accent-color: "#0E1013"
+
+        divider-color: "#23272D"
+        outline-color: "#23272D"
+        outline-hover-color: "#3A414B"
+        scrollbar-thumb-color: "#3A414B"
+        disabled-color: "#3A414B"
+
+        app-header-background-color: "#0E1013"
+        app-header-text-color: "#EEF1F4"
+        app-header-edit-background-color: "#ECEEF1"
+        app-header-edit-text-color: "#0E1013"
+        sidebar-background-color: "#121417"
+        sidebar-text-color: "#A7B0BB"
+        sidebar-icon-color: "#8B94A0"
+        sidebar-selected-text-color: "#EEF1F4"
+        sidebar-selected-icon-color: "#EEF1F4"
+
+        ha-panel-background: &osnova-dark-ornament "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2240%22%3E%3Cpath d=%22M0.6 4.6l2.8 2.8m0-2.8l-2.8 2.8M0.6 28.6l2.8 2.8m0-2.8l-2.8 2.8M4.6 0.6l2.8 2.8m0-2.8l-2.8 2.8M4.6 16.6l2.8 2.8m0-2.8l-2.8 2.8M4.6 32.6l2.8 2.8m0-2.8l-2.8 2.8M8.6 12.6l2.8 2.8m0-2.8l-2.8 2.8M8.6 20.6l2.8 2.8m0-2.8l-2.8 2.8M8.6 36.6l2.8 2.8m0-2.8l-2.8 2.8M12.6 8.6l2.8 2.8m0-2.8l-2.8 2.8M12.6 24.6l2.8 2.8m0-2.8l-2.8 2.8M16.6 4.6l2.8 2.8m0-2.8l-2.8 2.8M16.6 16.6l2.8 2.8m0-2.8l-2.8 2.8M16.6 28.6l2.8 2.8m0-2.8l-2.8 2.8M20.6 8.6l2.8 2.8m0-2.8l-2.8 2.8M20.6 24.6l2.8 2.8m0-2.8l-2.8 2.8M24.6 12.6l2.8 2.8m0-2.8l-2.8 2.8M24.6 20.6l2.8 2.8m0-2.8l-2.8 2.8M24.6 36.6l2.8 2.8m0-2.8l-2.8 2.8M28.6 0.6l2.8 2.8m0-2.8l-2.8 2.8M28.6 16.6l2.8 2.8m0-2.8l-2.8 2.8M28.6 32.6l2.8 2.8m0-2.8l-2.8 2.8M32.6 4.6l2.8 2.8m0-2.8l-2.8 2.8M32.6 28.6l2.8 2.8m0-2.8l-2.8 2.8M36.6 8.6l2.8 2.8m0-2.8l-2.8 2.8M36.6 24.6l2.8 2.8m0-2.8l-2.8 2.8M36.6 36.6l2.8 2.8m0-2.8l-2.8 2.8%22 fill=%22none%22 stroke=%22%23EEF1F4%22 stroke-opacity=%22.05%22 stroke-width=%22.9%22 stroke-linecap=%22round%22/%3E%3C/svg%3E') repeat fixed #0E1013"
+        lovelace-background: *osnova-dark-ornament
+
+        input-fill-color: "#1C2025"
+        input-ink-color: "#EEF1F4"
+        input-label-ink-color: "#8B94A0"
+        input-dropdown-icon-color: "#8B94A0"
+        input-idle-line-color: "#3A414B"
+        input-hover-line-color: "#8B94A0"
+        input-outlined-idle-border-color: "#3A414B"
+        input-outlined-hover-border-color: "#8B94A0"
+
+        ha-switch-background-color: "#3A414B"
+        ha-switch-border-color: "#3A414B"
+        ha-switch-thumb-background-color: "#EEF1F4"
+        ha-switch-thumb-border-color: "#EEF1F4"
+        ha-switch-checked-thumb-background-color: "#EEF1F4"
+        ha-switch-checked-thumb-border-color: "#EEF1F4"
+
+        state-icon-color: "#8B94A0"
+        state-inactive-color: "#8B94A0"
+        error-color: "#FF7A59"
+        warning-color: "#F2C14E"
+        success-color: "#4ADE9B"
+        info-color: "#6AA8FF"
+        red-color: "#FF7A59"
+        deep-orange-color: "#FF8A3D"
+        orange-color: "#FF8A3D"
+        amber-color: "#FFB547"
+        yellow-color: "#F2C14E"
+        green-color: "#4ADE9B"
+        teal-color: "#3CCFC1"
+        cyan-color: "#3CCFC1"
+        light-blue-color: "#6AA8FF"
+        blue-color: "#4DA6FF"
+        indigo-color: "#9B87F5"
+        deep-purple-color: "#9B87F5"
+        purple-color: "#C3A6FF"
+
+        energy-solar-color: "#FFB547"
+        energy-grid-consumption-color: "#6AA8FF"
+        energy-grid-return-color: "#9CCBFF"
+        energy-battery-out-color: "#4ADE9B"
+        energy-battery-in-color: "#4ADE9B"
+        energy-non-fossil-color: "#4ADE9B"
+        energy-gas-color: "#3CCFC1"
+        energy-water-color: "#4DA6FF"
+
+        ha-color-neutral-05: "#0E1013"
+        ha-color-neutral-10: "#15181C"
+        ha-color-neutral-20: "#1C2025"
+        ha-color-neutral-30: "#23272D"
+        ha-color-neutral-40: "#3A414B"
+        ha-color-neutral-50: "#626A76"
+        ha-color-neutral-60: "#8B94A0"
+        ha-color-neutral-70: "#99A2AE"
+        ha-color-neutral-80: "#A7B0BB"
+        ha-color-neutral-90: "#CAD0D8"
+        ha-color-neutral-95: "#EEF1F4"
+
+        ha-color-primary-05: "color-mix(in srgb, var(--primary-color) 8%, #15181C)"
+        ha-color-primary-10: "color-mix(in srgb, var(--primary-color) 13%, #15181C)"
+        ha-color-primary-20: "color-mix(in srgb, var(--primary-color) 22%, #15181C)"
+        ha-color-primary-30: "color-mix(in srgb, var(--primary-color) 78%, #0E1013)"
+        ha-color-primary-40: "var(--primary-color)"
+        ha-color-primary-50: "var(--primary-color)"
+        ha-color-primary-60: "var(--primary-color)"
+        ha-color-primary-70: "color-mix(in srgb, var(--primary-color) 72%, #EEF1F4)"
+        ha-color-primary-80: "color-mix(in srgb, var(--primary-color) 50%, #EEF1F4)"
+        ha-color-primary-90: "color-mix(in srgb, var(--primary-color) 30%, #EEF1F4)"
+        ha-color-primary-95: "color-mix(in srgb, var(--primary-color) 15%, #EEF1F4)"
+
+        ha-color-text-primary: "#EEF1F4"
+        ha-color-text-disabled: "#626A76"
+        ha-color-on-neutral-loud: "#0E1013"
+        ha-color-on-primary-loud: "#0E1013"
+        ha-color-border-primary-quiet: "var(--ha-color-primary-20)"
+
+      primary-color: "#4ADE9B"
+      accent-color: "#4ADE9B"
+      light-primary-color: "#1C322D"
+      dark-primary-color: "#3DB17D"
+
+Osnova Nebo:
+  <<: *osnova
+  modes:
+    light:
+      <<: *osnova-light
+      primary-color: "#1D64B3"
+      accent-color: "#1D64B3"
+      light-primary-color: "#E2EBF5"
+      dark-primary-color: "#1C589C"
+    dark:
+      <<: *osnova-dark
+      primary-color: "#6AA8FF"
+      accent-color: "#6AA8FF"
+      light-primary-color: "#202B3A"
+      dark-primary-color: "#5687CB"
+
+Osnova Burshtyn:
+  <<: *osnova
+  modes:
+    light:
+      <<: *osnova-light
+      primary-color: "#8A5A00"
+      accent-color: "#8A5A00"
+      light-primary-color: "#F0EADE"
+      dark-primary-color: "#785004"
+    dark:
+      <<: *osnova-dark
+      primary-color: "#FFB547"
+      accent-color: "#FFB547"
+      light-primary-color: "#332C22"
+      dark-primary-color: "#CA913C"
+
+Osnova Buzok:
+  <<: *osnova
+  modes:
+    light:
+      <<: *osnova-light
+      primary-color: "#5B47C9"
+      accent-color: "#5B47C9"
+      light-primary-color: "#EAE7F8"
+      dark-primary-color: "#5040AF"
+    dark:
+      <<: *osnova-dark
+      primary-color: "#C3A6FF"
+      accent-color: "#C3A6FF"
+      light-primary-color: "#2C2A3A"
+      dark-primary-color: "#9B85CB"
+
+Osnova Koral:
+  <<: *osnova
+  modes:
+    light:
+      <<: *osnova-light
+      primary-color: "#B7362B"
+      accent-color: "#B7362B"
+      light-primary-color: "#F6E5E3"
+      dark-primary-color: "#9F3128"
+    dark:
+      <<: *osnova-dark
+      primary-color: "#FF7A59"
+      accent-color: "#FF7A59"
+      light-primary-color: "#332524"
+      dark-primary-color: "#CA634A"
+
+Osnova Biriuza:
+  <<: *osnova
+  modes:
+    light:
+      <<: *osnova-light
+      primary-color: "#0E7A72"
+      accent-color: "#0E7A72"
+      light-primary-color: "#E0EEED"
+      dark-primary-color: "#0F6B65"
+    dark:
+      <<: *osnova-dark
+      primary-color: "#3CCFC1"
+      accent-color: "#3CCFC1"
+      light-primary-color: "#1A3031"
+      dark-primary-color: "#32A59B"
