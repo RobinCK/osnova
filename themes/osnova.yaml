@@ -39,8 +39,8 @@ Osnova:
 
         app-header-background-color: "#F2F3F5"
         app-header-text-color: "#14171A"
-        app-header-edit-background-color: "#14171A"
-        app-header-edit-text-color: "#FFFFFF"
+        app-header-edit-background-color: "#FFFFFF"
+        app-header-edit-text-color: "#14171A"
         sidebar-background-color: "#FFFFFF"
         sidebar-text-color: "#454D57"
         sidebar-icon-color: "#646C76"
@@ -146,8 +146,8 @@ Osnova:
 
         app-header-background-color: "#0E1013"
         app-header-text-color: "#EEF1F4"
-        app-header-edit-background-color: "#ECEEF1"
-        app-header-edit-text-color: "#0E1013"
+        app-header-edit-background-color: "#1C2025"
+        app-header-edit-text-color: "#EEF1F4"
         sidebar-background-color: "#121417"
         sidebar-text-color: "#A7B0BB"
         sidebar-icon-color: "#8B94A0"
